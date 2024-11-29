@@ -1,0 +1,57 @@
+package thaopech.insee.lab2;
+
+
+public class RockPaperScissors {
+
+    public enum Choice {
+        rock, paper, scissors
+    }
+    
+    public static Choice RockPaperScissorsCal(Choice choice) {
+        switch (choice) {
+            case paper:
+                return Choice.rock;
+            case rock:
+                return Choice.scissors;
+            case scissors:
+                return Choice.paper;
+            default:
+                throw new IllegalArgumentException();
+        }
+    }
+
+    public static String RockPaperScissorsResponse(Choice player1, Choice player2) {
+        if (player1 == player2) {
+            return "It's a tie!";
+        } 
+        if (player2 == RockPaperScissorsCal(player1)) {
+            return "Player 1 wins!";
+        }
+        return "Player 2 wins!";
+    }
+
+    public static void main(String[] args) {
+        if (args.length != 2) {
+            System.err.println("Error: Invalid number of arguments. Please provide exactly two arguments.");
+            System.exit(0);
+        }
+        Choice player1 = null;
+        Choice player2 = null;
+
+        try {
+            player1 = Choice.valueOf(args[0].toLowerCase());
+            player2 = Choice.valueOf(args[1].toLowerCase());
+        } catch (IllegalArgumentException e) {
+            System.err.println("Error: Invalid choice(s). Valid choices are 'rock', 'paper', or 'scissors'.");
+            System.exit(0);
+        }
+
+        System.out.println("Player 1 chooses: " + player1);
+        System.out.println("Player 2 chooses: " + player2);
+        
+        String result = RockPaperScissorsResponse(player1, player2);
+        System.out.println(result);
+
+        System.exit(0);
+    }
+}

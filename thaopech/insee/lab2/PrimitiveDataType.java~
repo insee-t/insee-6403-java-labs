@@ -1,0 +1,36 @@
+package thaopech.insee.lab2;
+
+
+public class PrimitiveDataType {
+
+    public static void main(String[] args) {
+
+        String studentNum = args[0];
+        String firstName = args[1];
+        byte myByte = (byte)args[1].length();
+        short myShort = (short)((short)myByte * (short)21);
+        String studentNumWithOutSpecial = studentNum.replaceAll("-", "").replace(" ", "");
+        long myLong = Long.parseLong(studentNumWithOutSpecial);
+
+        // Get last 6 digits
+        int myInt = (int)(myLong % 10000000);
+        float myFloat = (float)((float)myByte / 100);
+        double myDouble = (double)((double)(myLong % 10000) / 10000);
+        char myChar = firstName.charAt(0);
+        int lastDig = myInt % 10;
+        boolean myBoolean = (myInt & 1) != 0;
+        
+        System.out.println("Student ID: " + studentNum);
+        System.out.println("First Name: " + firstName);
+        System.out.println("Byte Value: " + myByte);
+        System.out.println("Short Value: " + myShort);
+        System.out.println("Int Value: " + myInt);
+        System.out.println("Long Value: " + myLong);
+        System.out.println("Float Value: " + myFloat);
+        System.out.println("Double Value: " + myDouble);
+        System.out.println("Char Value: " + myChar);
+        System.out.println("Boolean Value: " + myBoolean);
+
+        System.exit(0);
+    }    
+}
