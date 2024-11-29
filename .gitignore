@@ -1,4 +1,4 @@
 *.org
-*.org~
 *.class
-*.java~
+// ignore emacs backup
+*~
