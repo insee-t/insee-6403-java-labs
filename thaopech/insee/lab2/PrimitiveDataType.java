@@ -25,8 +25,10 @@
 
       public static void main(String[] args) {
 
+          // Declaration
           String studentNum = args[0];
           String firstName = args[1];
+
           byte myByte = (byte)args[1].length();
           short myShort = (short)((short)myByte * (short)21);
           String studentNumWithOutSpecial = studentNum.replaceAll("-", "").replace(" ", "");
@@ -34,12 +36,17 @@
 
           // Get last 6 digits
           int myInt = (int)(myLong % 10000000);
+
+          // myByte / 100 to get to format 0.xx
           float myFloat = (float)((float)myByte / 100);
+
+          // Same with myDouble
           double myDouble = (double)((double)(myLong % 10000) / 10000);
           char myChar = firstName.charAt(0);
           int lastDig = myInt % 10;
           boolean myBoolean = (myInt & 1) != 0;
         
+          // Output
           System.out.println("Student ID: " + studentNum);
           System.out.println("First Name: " + firstName);
           System.out.println("Byte Value: " + myByte);
