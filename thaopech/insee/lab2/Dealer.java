@@ -20,7 +20,7 @@
 
       public static void main(String[] args) {
           //
-        // Check for exactly 3 arguments
+        // Check if exactly 3 arguments are provided
           if (args.length != 3) {
               System.err.println("Error: Invalid number of arguments. Please provide exactly three arguments.");
               System.exit(0);
