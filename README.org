@@ -28,7 +28,7 @@
 ** Lab 2
 
 *** The Dealer program
-[[./thaopech/insee/lab2/Dealer.java][The Dealer program]] - This program accepts three arguments then processes and displays dealer information.
+[[./thaopech/insee/lab2/Dealer.java][The Dealer program]] - The program accepts three arguments then processes and displays dealer information.
 **** The output should be
 
 #+BEGIN_EXAMPLE
@@ -40,7 +40,7 @@ Gender : <dealerGender>
 
 *** The PrimitiveDataType program
 
-This program input student ID and name then processes 
+[[./thaopech/insee/lab2/PrimitiveDataType.java][The PrimitiveDataType program]] - The program input student ID and name then processes 
 **** and output the following.
 
 #+BEGIN_EXAMPLE
@@ -56,11 +56,13 @@ Boolean Value: is last digits of student ID odd or not?
 
 
 *** The RockPaperScissors program
-This program accepts two arguments then calculate logic of normal game of rock paper and scissors.
+[[./thaopech/insee/lab2/RockPaperScissors.java][The RockPaperScissors program]] - The program accepts two arguments then calculate logic of normal game of Rock-Paper-Scissors.
+#+BEGIN_QUOTE
 1. Rock crushes Scissors: Rock wins.
 2. Scissors cut Paper: Scissors win.
 3. Paper covers Rock: Paper wins.
 4. If both players choose the same option, the result is a tie.
+#+END_QUOTE
 **** The output should be
 #+BEGIN_EXAMPLE
 Player 1 chooses: <player1>
@@ -73,14 +75,14 @@ Player 2 chooses: <player2>
 
 
 *** The SimpleStringManipulator program
-This program accepts two arguments and performs simple manipulations.
+[[./thaopech/insee/lab2/SimpleStringManipulator.java][The SimpleStringManipulator program]] - The program accepts two arguments and performs simple manipulations.
 
 ***** First String Processing:
-- If the first string starts with a vowel (~a, e, i, o, u, case-insensitive~), convert the first character to uppercase.
+- If the first string starts with a vowel, convert the first character to uppercase.
 - Else, convert the first character to lowercase.
 
 ***** Second String Processing:
-- If the second string ends with a consonant (any letter that's not a vowel, case-insensitive), convert the last character to uppercase.
+- If the second string ends with a consonant, convert the last character to uppercase.
 - Else, convert the last character to lowercase.
 
 ***** Result String:
@@ -97,7 +99,7 @@ Resulting Sting: <result>
 ** Lab 3
 *** The NumberGuessingGame program
 
-The program simulates a guessing game of which a user guesses a number from 1 to 10. The answer is randomly generated then a user enters a number via the console. 
+[[./thaopech/insee/lab3/NumberGuessingGame.java][The NumberGuessingGame program]] - The program simulates a guessing game of which a user guesses a number from 1 to 10. The answer is randomly generated then a user enters a number via the console. 
 **** Each time a number is entered, one of the following three possible outputs will be displayed. 
     1. ~Congratulations!~	if the number entered is the same as the answer.
     2. ~Try a lower number!~ 	if the number entered is higher than the answer.
@@ -108,13 +110,13 @@ The program simulates a guessing game of which a user guesses a number from 1 to
 
 *** The ConfigurableNumberGuessingGame program
 
-The program simulates a guessing game of which a user guesses a number from ~min~ to ~max~. The answer is randomly generated then a user enters a number via the console. 
+[[./thaopech/insee/lab3/ConfigurableNumberGuessingGame.java][The ConfigurableNumberGuessingGame]] - The program simulates a guessing game of which a user guesses a number from /min/ to /max/. The answer is randomly generated then a user enters a number via the console. 
 *** Each time a number is entered, one of the following three possible outputs will be displayed. 
     1. ~Congratulations!~	if the number entered is the same as the answer.
     2. ~Try a lower number!~ 	if the number entered is higher than the answer.
     3. ~Try a higher number!~ 	if the number entered is smaller than the answer.  
 
-- The game ends when the user guesses the answer correctly or the user guesses the number incorrectly <numOfTries> times. 
+- The game ends when the user guesses the answer correctly or the user guesses the number incorrectly /numTries/ times. 
 
 - The program asks the user to enter the min value, the max value, and the maximum number of tries.
     - The program also checks and detects configuration settings that the user may enter as following
@@ -125,7 +127,7 @@ The program simulates a guessing game of which a user guesses a number from ~min
 
 *** The NumberGuessingGames program
 
-The program allows the user to play [[#the-configurablenumberguessinggame-program][the ConfigurableNumberGuessingGame]] several times until the user indicates that he/she wants to stop playing the game.  
+[[./thaopech/insee/lab3/NumberGuessingGames.java][The NumberGuessingGames program]] - The program allows the user to play [[#the-configurablenumberguessinggame-program][the ConfigurableNumberGuessingGame]] several times until the user indicates that he/she wants to stop playing the game.  
 - The answer will be random each time the user chooses to play again. 
 - On the other hand, the program will not ask the user to config (min,max,number of tries) again.
 - After the game ends, the program gives an option to play again if the user enters ~y~ or ~Y~. If the user enters other values, the program will quit and print the message
