@@ -39,26 +39,26 @@
 
           if (isVowel(firstChar)) {
 
-              // Prepend uppercase version of first character.
+              // Prepend uppercase version of first character
           return firstString = Character.toUpperCase(firstChar) + firstString.substring(1);
           }
-          // Prepend lowercase version of first character.
+          // Prepend lowercase version of first character
           return firstString = firstChar + firstString.substring(1);
       }
 
       public static String secStringProcess(String secString, char lastChar) {
 
           if (!isVowel(lastChar)) {
-              // Append uppercase version of last character.
+              // Append uppercase version of last character
               return secString.substring(0, secString.length() - 1) + Character.toUpperCase(lastChar);
           }
-          // Append lowercase version of first character.
+          // Append lowercase version of first character
           return secString.substring(0, secString.length() - 1) + lastChar;
       }
 
       public static void main(String[] args) {
 
-          // Check if number of arguments is valid.
+          // Check if exactly 2 arguments are provided
           if (args.length != 2) {
               System.err.println("Invalid number of arguments. Please provide exactly two strings as arguments.");
               return;
@@ -67,19 +67,19 @@
           String firstString = args[0];
           String secString = args[1];
 
-          // Get first character from first string and convert to lowercase.
+          // Get first character from first string and convert to lowercase
           char firstCharOfFirstString = Character.toLowerCase(firstString.charAt(0));
 
-          // Get last character from second string and covert to lowercase.
+          // Get last character from second string and covert to lowercase
           char lastCharOfSecString = Character.toLowerCase(secString.charAt(secString.length() - 1));
 
           System.out.println("First String: " + firstString);
           System.out.println("Second String: " + secString);
-          // Process first and second string.
+          // Process first and second string
           firstString = firstStringProcess(firstString, firstCharOfFirstString);
           secString = secStringProcess(secString, lastCharOfSecString);
 
-          // Output
+          // Output processed string
           String result = firstString + secString;
           System.out.println("Resulting String: " + result);
 
