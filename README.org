@@ -31,11 +31,11 @@
 This program accepts three arguments then processes and displays dealer information.
 *** The output should be
 
-#+begin_src java
+#+BEGIN_OUTPUT
 Dealer's name : <dealerName>
 Number of clients : <NumClient>
 Gender : <dealerGender>
-#+end_src
+#+END_OUTPUT
 
 
 ** The PrimitiveDataType program
@@ -43,7 +43,7 @@ Gender : <dealerGender>
 This program input student ID and name then processes 
 *** and output the following.
 
-#+begin_src java
+#+BEGIN_OUTPUT
 Student ID : <studentNum>
 First Name : <firstName>
 Byte Value: number of letter in first name.
@@ -52,7 +52,7 @@ Long Value: student ID without dashes or spaces.
 Float Value: myByte / 100.
 Double Value: last four digits of student ID / 10000.
 Boolean Value: is last digits of student ID odd or not?
-#+end_src
+#+END_OUTPUT
 
 
 ** The RockPaperScissors program
@@ -62,14 +62,14 @@ This program accepts two arguments then calculate logic of normal game of rock p
 3. Paper covers Rock: Paper wins.
 4. If both players choose the same option, the result is a tie.
 *** The output should be
-#+begin_src java
+#+BEGIN_OUTPUT
 Player 1 chooses: <player1>
 Player 2 chooses: <player2>
+#+END_OUTPUT
 
-If Player 1 wins: "Player 1 wins!"
-If Player 2 wins: "Player 2 wins!"
-If it's a tie: "It's a tie!"
-#+end_src
+If Player 1 wins: ~Player 1 wins!~
+If Player 2 wins: ~Player 2 wins!~
+If it's a tie: ~It's a tie!~
 
 
 ** The SimpleStringManipulator program
@@ -88,20 +88,20 @@ This program accepts two arguments and performs simple manipulations.
 
 *** The output should be
 
-#+begin_src java
+#+BEGIN_OUTPUT
 First String: <firstString>
 Second String: <secString>
 Resulting Sting: <result>
-#+end_src
+#+END_OUTPUT
 
 * Lab 3
 * The NumberGuessingGame program
 
 The program simulates a guessing game of which a user guesses a number from 1 to 10. The answer is randomly generated then a user enters a number via the console. 
 *** Each time a number is entered, one of the following three possible outputs will be displayed. 
-1. “Congratulations!”	if the number entered is the same as the answer.
-2. “Try a lower number!” 	if the number entered is higher than the answer.
-3. “Try a higher number!” 	if the number entered is smaller than the answer.  
+    1. “Congratulations!”	if the number entered is the same as the answer.
+    2. “Try a lower number!” 	if the number entered is higher than the answer.
+    3. “Try a higher number!” 	if the number entered is smaller than the answer.  
 
 *** The game ends when the user guesses the answer correctly or the user guesses the number incorrectly 5 times. 
 
@@ -110,9 +110,9 @@ The program simulates a guessing game of which a user guesses a number from 1 to
 
 The program simulates a guessing game of which a user guesses a number from <min> to <max>. The answer is randomly generated then a user enters a number via the console. 
 *** Each time a number is entered, one of the following three possible outputs will be displayed. 
-1. “Congratulations!”	if the number entered is the same as the answer.
-2. “Try a lower number!” 	if the number entered is higher than the answer.
-3. “Try a higher number!” 	if the number entered is smaller than the answer.  
+    1. “Congratulations!”	if the number entered is the same as the answer.
+    2. “Try a lower number!” 	if the number entered is higher than the answer.
+    3. “Try a higher number!” 	if the number entered is smaller than the answer.  
 
 - The game ends when the user guesses the answer correctly or the user guesses the number incorrectly <numOfTries> times. 
 
