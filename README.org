@@ -6,7 +6,7 @@
 #+HTML:</div>
 
 * Table of Contents                                                     :TOC_2:QUOTE:
-#+BEGIN_QUOTE
+#+BEGIN_EXAMPLE
 - [[#lab-1][Lab 1]]
     - [[#the-hello-program][The Hello program]]
 - [[#lab-2][Lab 2]]
@@ -31,11 +31,11 @@
 This program accepts three arguments then processes and displays dealer information.
 *** The output should be
 
-#+BEGIN_OUTPUT
+#+BEGIN_EXAMPLE
 Dealer's name : <dealerName>
 Number of clients : <NumClient>
 Gender : <dealerGender>
-#+END_OUTPUT
+#+END_EXAMPLE
 
 
 ** The PrimitiveDataType program
@@ -43,7 +43,7 @@ Gender : <dealerGender>
 This program input student ID and name then processes 
 *** and output the following.
 
-#+BEGIN_OUTPUT
+#+BEGIN_EXAMPLE
 Student ID : <studentNum>
 First Name : <firstName>
 Byte Value: number of letter in first name.
@@ -52,7 +52,7 @@ Long Value: student ID without dashes or spaces.
 Float Value: myByte / 100.
 Double Value: last four digits of student ID / 10000.
 Boolean Value: is last digits of student ID odd or not?
-#+END_OUTPUT
+#+END_EXAMPLE
 
 
 ** The RockPaperScissors program
@@ -62,14 +62,14 @@ This program accepts two arguments then calculate logic of normal game of rock p
 3. Paper covers Rock: Paper wins.
 4. If both players choose the same option, the result is a tie.
 *** The output should be
-#+BEGIN_OUTPUT
+#+BEGIN_EXAMPLE
 Player 1 chooses: <player1>
 Player 2 chooses: <player2>
-#+END_OUTPUT
+#+END_EXAMPLE
 
-If Player 1 wins: ~Player 1 wins!~
-If Player 2 wins: ~Player 2 wins!~
-If it's a tie: ~It's a tie!~
+- If Player 1 wins: ~Player 1 wins!~
+- If Player 2 wins: ~Player 2 wins!~
+- If it's a tie: ~It's a tie!~
 
 
 ** The SimpleStringManipulator program
@@ -88,11 +88,11 @@ This program accepts two arguments and performs simple manipulations.
 
 *** The output should be
 
-#+BEGIN_OUTPUT
+#+BEGIN_EXAMPLE
 First String: <firstString>
 Second String: <secString>
 Resulting Sting: <result>
-#+END_OUTPUT
+#+END_EXAMPLE
 
 * Lab 3
 * The NumberGuessingGame program
