@@ -3,6 +3,10 @@ NumberGuessingGame.org
 PrimitiveDataType.org
 RockPaperScissors.org
 SimpleStringManipulator.org
+
 *.class
+
 # ignore emacs backup
 *~
+\#*\#
+.\#*
