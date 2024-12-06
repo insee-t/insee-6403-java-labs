@@ -26,6 +26,12 @@
 
       public static void main(String[] args) {
 
+        // Check if exactly 2 arguments are provided
+        if (args.length != 2) {
+            System.err.println("Error: Invalid number of arguments. Please provide two arguments.");
+            System.exit(0);
+        }
+
           // Declaration
           String studentNum = args[0];
           String firstName = args[1];
