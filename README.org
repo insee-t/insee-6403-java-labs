@@ -2,11 +2,11 @@
 #+CREATOR: Insee thaopech
 
 * Lab 1
-** [[./lab1/Hello.java]][[The Hello program]]
+** [[./lab1/Hello.java][The Hello program]]
 
 * Lab 2
 
-** [[./thaopech/insee/lab2/Dealer.java]][[The Dealer program]]
+** [[./thaopech/insee/lab2/Dealer.java][The Dealer program]]
 
 This program accepts three arguments then processes and displays dealer information.
 *** The output should be
@@ -16,7 +16,7 @@ Number of clients : <NumClient>
 Gender : <dealerGender>
 
 
-** [[./thaopech/insee/lab2/PrimitiveDataType.java]][[The PrimitiveDataType program]]
+** [[./thaopech/insee/lab2/PrimitiveDataType.java][The PrimitiveDataType program]]
 
 This program input student ID and name then processes 
 *** and output the following.
@@ -31,7 +31,7 @@ Double Value: last four digits of student ID / 10000.
 Boolean Value: is last digits of student ID odd or not?
 
 
-** [[./thaopech/insee/lab2/RockPaperScissors.java]][[The RockPaperScissors program]]
+** [[./thaopech/insee/lab2/RockPaperScissors.java][The RockPaperScissors program]]
 This program accepts two arguments then calculate logic of normal game of rock paper and scissors.
 1. Rock crushes Scissors: Rock wins.
 2. Scissors cut Paper: Scissors win.
@@ -46,7 +46,7 @@ If Player 2 wins: "Player 2 wins!"
 If it's a tie: "It's a tie!"
 
 
-** [[./thaopech/insee/lab2/SimpleStringManipulator.java]][[The SimpleStringManipulator program]]
+** [[./thaopech/insee/lab2/SimpleStringManipulator.java][The SimpleStringManipulator program]]
 This program accepts two arguments and performs simple manipulations.
 
 **** First String Processing:
@@ -67,7 +67,7 @@ Second String: <secString>
 Resulting Sting: <result>
 
 
-* [[./thaopech/insee/lab3/NumberGuessingGame.java]][[The NumberGuessingGame program]]
+* [[./thaopech/insee/lab3/NumberGuessingGame.java][The NumberGuessingGame program]]
 
 The program simulates a guessing game of which a user guesses a number from 1 to 10. The answer is randomly generated then a user enters a number via the console. 
 *** Each time a number is entered, one of the following three possible outputs will be displayed. 
@@ -78,7 +78,7 @@ The program simulates a guessing game of which a user guesses a number from 1 to
 *** The game ends when the user guesses the answer correctly or the user guesses the number incorrectly 5 times. 
 
 
-* [[./thaopech/insee/lab3/ConfigurableNumberGuessingGame.java]][[The ConfigurableNumberGuessingGame program]]
+* [[./thaopech/insee/lab3/ConfigurableNumberGuessingGame.java][The ConfigurableNumberGuessingGame program]]
 
 The program simulates a guessing game of which a user guesses a number from <min> to <max>. The answer is randomly generated then a user enters a number via the console. 
 *** Each time a number is entered, one of the following three possible outputs will be displayed. 
@@ -95,9 +95,9 @@ The program simulates a guessing game of which a user guesses a number from <min
         - The program checks whether a number is outside the minimum or maximum values. If it is, the program asks the user to enter a number again and does not increment the number of tries.  
 
 
-* [[./thaopech/insee/lab3/NumberGuessingGames.java]][[The NumberGuessingGames program]]
+* [[./thaopech/insee/lab3/NumberGuessingGames.java][The NumberGuessingGames program]]
 
-The program allows the user to play the [[#ConfigurableNumberGuessingGame]][[ConfigurableNumberGuessingGame]] several times until the user indicates that he/she wants to stop playing the game.  
+The program allows the user to play the [[#ConfigurableNumberGuessingGame][ConfigurableNumberGuessingGame]] several times until the user indicates that he/she wants to stop playing the game.  
 - The answer will be random each time the user chooses to play again. 
 - On the other hand, the program will not ask the user to config (min,max,number of tries) again.
 - After the game ends, the program gives an option to play again if the user enters “y” or “Y”. If the user enters other values, the program will quit and print the message  “Thank you for playing our games. Bye!"

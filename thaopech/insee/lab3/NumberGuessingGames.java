@@ -4,7 +4,7 @@
 // #+sec: 2
 // #+last_updated: 2024 Dec 6
 // 
-// The program allows the user to play the [[#ConfigurableNumberGuessingGame]][[ConfigurableNumberGuessingGame]] several times until the user indicates that he/she wants to stop playing the game.  
+// The program allows the user to play the [[#ConfigurableNumberGuessingGame][ConfigurableNumberGuessingGame]] several times until the user indicates that he/she wants to stop playing the game.  
 // * The answer will be random each time the user chooses to play again. 
 // On the other hand, the program will not ask the user to config (min,max,number of tries) again.
 // * After the game ends, the program gives an option to play again if the user enters “y” or “Y”. If the user enters other values, the program will quit and print the message  “Thank you for playing our games. Bye!"
