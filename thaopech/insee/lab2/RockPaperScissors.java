@@ -26,7 +26,7 @@
 
   public class RockPaperScissors {
 
-      // Use enum make code more understandable.
+      // Use enum make code more understandable
       public enum Choice {
           ROCK,
           PAPER,
@@ -35,7 +35,7 @@
 
       public static void main(String[] args) {
           
-          // Check if number of arguments valid.
+          // Check if exactly 2 arguments are provided
           if (args.length != 2) {
               System.err.println("Error: Invalid number of arguments. Please provide exactly two arguments.");
               System.exit(0);
@@ -61,7 +61,7 @@
           System.exit(0);
       }
     
-      // Calculate rock paper scissors based on stated logic.
+      // Calculate rock paper scissors based on stated logic
       public static Choice getCounterChoice(Choice choice) {
 
           switch (choice) {
@@ -76,7 +76,7 @@
           }
       }
 
-      // Function that determine who wins.
+      // Function that determine who wins
       public static String getResult(Choice player1, Choice player2) {
 
           if (player1 == player2) {
