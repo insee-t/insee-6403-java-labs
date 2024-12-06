@@ -2,21 +2,21 @@
 // #+author: Insee thaopech
 // #+id: 673040640-3
 // #+sec: 2
-// #+last_updated: 2024 Nov 29
+// #+last_updated: 2024 Dec 6
 // 
-// This program accepts two arguments then calculate logic of normal game of rock paper and scissors.
-// Rock crushes Scissors: Rock wins.
-// Scissors cut Paper: Scissors win.
-// Paper covers Rock: Paper wins.
-// If both players choose the same option, the result is a tie.
+// This program accepts two arguments then calculate logic of normal game of Rock-Paper-Scissors.
+// 1. Rock crushes Scissors: Rock wins.
+// 2. Scissors cut Paper: Scissors win.
+// 3. Paper covers Rock: Paper wins.
+// 4. If both players choose the same option, the result is a tie.
 // * The output should be
 // 
-// Player 1 chooses: <player1>
-// Player 2 chooses: <player2>
+// : Player 1 chooses: <player1>
+// : Player 2 chooses: <player2>
 // 
-// If Player 1 wins: "Player 1 wins!"
-// If Player 2 wins: "Player 2 wins!"
-// If it's a tie: "It's a tie!"
+// - If Player 1 wins: "Player 1 wins!"
+// - If Player 2 wins: "Player 2 wins!"
+// - If it's a tie: "It's a tie!"
 // 
 // 
 // #+begin_src java
@@ -28,36 +28,9 @@
 
       // Use enum make code more understandable.
       public enum Choice {
-          rock,
-          paper,
-          scissors
-      }
-    
-      // Calculate rock paper scissors based on state logic.
-      public static Choice RockPaperScissorsCal(Choice choice) {
-
-          switch (choice) {
-              case paper:
-                  return Choice.rock;
-              case rock:
-                  return Choice.scissors;
-              case scissors:
-                  return Choice.paper;
-              default:
-                  throw new IllegalArgumentException();
-          }
-      }
-
-      // Function that determine who wins.
-      public static String RockPaperScissorsResponse(Choice player1, Choice player2) {
-
-          if (player1 == player2) {
-              return "It's a tie!";
-          } 
-          if (player2 == RockPaperScissorsCal(player1)) {
-              return "Player 1 wins!";
-          }
-          return "Player 2 wins!";
+          ROCK,
+          PAPER,
+          SCISSORS
       }
 
       public static void main(String[] args) {
@@ -71,21 +44,48 @@
           Choice player2 = null;
 
           try {
-              player1 = Choice.valueOf(args[0].toLowerCase());
-              player2 = Choice.valueOf(args[1].toLowerCase());
+              player1 = Choice.valueOf(args[0].toUpperCase());
+              player2 = Choice.valueOf(args[1].toUpperCase());
           } catch (IllegalArgumentException e) {
               System.err.println("Error: Invalid choice(s). Valid choices are 'rock', 'paper', or 'scissors'.");
-              System.exit(0);
+              return;
           }
 
-          // Output
+          // Output choices and result
           System.out.println("Player 1 chooses: " + player1);
           System.out.println("Player 2 chooses: " + player2);
         
-          String result = RockPaperScissorsResponse(player1, player2);
+          String result = getResult(player1, player2);
           System.out.println(result);
 
           System.exit(0);
+      }
+    
+      // Calculate rock paper scissors based on stated logic.
+      public static Choice getCounterChoice(Choice choice) {
+
+          switch (choice) {
+              case PAPER:
+                  return Choice.ROCK;
+              case ROCK:
+                  return Choice.SCISSORS;
+              case SCISSORS:
+                  return Choice.PAPER;
+              default:
+                  throw new IllegalArgumentException();
+          }
+      }
+
+      // Function that determine who wins.
+      public static String getResult(Choice player1, Choice player2) {
+
+          if (player1 == player2) {
+              return "It's a tie!";
+          } 
+          if (player2 == getCounterChoice(player1)) {
+              return "Player 1 wins!";
+          }
+          return "Player 2 wins!";
       }
   }
 // #+end_src

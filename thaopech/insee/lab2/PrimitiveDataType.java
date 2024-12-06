@@ -2,18 +2,19 @@
 // #+author: Insee thaopech
 // #+id: 673040640-3
 // #+sec: 2
-// #+last_updated: 2024 Nov 29
+// #+last_updated: 2024 Dec 6
 // 
-//  This program input student ID and name then processes and output the following.
+// This program input student ID and name then processesand
+// * and output the following.
 // 
-//  Student ID : <studentNum>
-//  First Name : <firstName>
-//  Byte Value: number of letter in first name.
-//  Int Value: last six digits of student ID.
-//  Long Value: student ID without dashes or spaces.
-//  Float Value: myByte / 100.
-//  Double Value: last four digits of student ID / 10000.
-//  Boolean Value: is last digits of student ID odd or not?
+// : Student ID : <studentNum>
+// : First Name : <firstName>
+// : Byte Value: number of letter in first name.
+// : Int Value: last six digits of student ID.
+// : Long Value: student ID without dashes or spaces.
+// : Float Value: myByte / 100.
+// : Double Value: last four digits of student ID / 10000.
+// : Boolean Value: is last digits of student ID odd or not?
 // 
 // 
 // #+begin_src java
@@ -30,23 +31,22 @@
           String firstName = args[1];
 
           byte myByte = (byte)args[1].length();
-          short myShort = (short)((short)myByte * (short)21);
-          String studentNumWithOutSpecial = studentNum.replaceAll("-", "").replace(" ", "");
+          short myShort = (short)(myByte * 21);
+          String studentNumWithOutSpecial = studentNum.replaceAll("[^\\d]", ""); // Remove non-digit characters
           long myLong = Long.parseLong(studentNumWithOutSpecial);
 
           // Get last 6 digits
           int myInt = (int)(myLong % 10000000);
 
           // myByte / 100 to get to format 0.xx
-          float myFloat = (float)((float)myByte / 100);
-
+          float myFloat = myByte / 100f;
           // Same with myDouble
-          double myDouble = (double)((double)(myLong % 10000) / 10000);
+          double myDouble = (myLong % 10000) / 10000.0;
           char myChar = firstName.charAt(0);
           int lastDig = myInt % 10;
-          boolean myBoolean = (myInt & 1) != 0;
+          boolean myBoolean = lastDig % 2 != 0;
         
-          // Output
+          // Output the processed values
           System.out.println("Student ID: " + studentNum);
           System.out.println("First Name: " + firstName);
           System.out.println("Byte Value: " + myByte);

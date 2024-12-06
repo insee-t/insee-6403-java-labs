@@ -2,26 +2,26 @@
 // #+author: Insee thaopech
 // #+id : 673040640-3
 // #+sec : 2
-// #+last_updated: 2024 Nov 29
+// #+last_updated: 2024 Dec 6
 // 
 // This program accepts two arguments and performs simple manipulations.
 // 
-// * First String Processing:
+// ** First String Processing:
 // - If the first string starts with a vowel (a, e, i, o, u, case-insensitive), convert the first character to uppercase.
 // - Else, convert the first character to lowercase.
 // 
-// * Second String Processing:
+// ** Second String Processing:
 // - If the second string ends with a consonant (any letter that's not a vowel, case-insensitive), convert the last character to uppercase.
 // - Else, convert the last character to lowercase.
 // 
-// * Result String:
+// ** Result String:
 // - Concatenate the modified first string and the modified second string.
 // 
 // * The output should be
 // 
-// First String: <firstString>
-// Second String: <secString>
-// Resultng Sting: <result>
+// : First String: <firstString>
+// : Second String: <secString>
+// : Resultng Sting: <result>
 // 
 // #+begin_src java
 
@@ -30,13 +30,14 @@
 
   public class SimpleStringManipulator {
 
+      public static boolean isVowel(char c) {
+        char lowerChar = Character.toLowerCase(c);
+        return lowerChar == 'a' || lowerChar == 'e' || lowerChar == 'i' || lowerChar == 'o' || lowerChar == 'u';
+    }
+
       public static String firstStringProcess(String firstString, char firstChar) {
 
-          if (firstChar == 'a' ||
-              firstChar == 'e' ||
-              firstChar == 'i' ||
-              firstChar == 'o' ||
-              firstChar == 'u') {
+          if (isVowel(firstChar)) {
 
               // Prepend uppercase version of first character.
           return firstString = Character.toUpperCase(firstChar) + firstString.substring(1);
@@ -47,11 +48,7 @@
 
       public static String secStringProcess(String secString, char lastChar) {
 
-          if (lastChar != 'a' &&
-              lastChar != 'e' &&
-              lastChar != 'i' &&
-              lastChar != 'o' &&
-              lastChar != 'u') {
+          if (!isVowel(lastChar)) {
               // Append uppercase version of last character.
               return secString.substring(0, secString.length() - 1) + Character.toUpperCase(lastChar);
           }
