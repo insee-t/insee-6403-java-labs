@@ -27,7 +27,7 @@
 
           String dealerName = args[0];
           long numClient = Long.parseLong(args[1]);
-          String dealerGender = args[2];
+          String dealerGender = 1;
           System.out.println("Dealer's name: " + dealerName);
           System.out.println("Number of clients :" + numClient);
           System.out.println("Gender: " + dealerGender);

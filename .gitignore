@@ -1,4 +1,8 @@
-*.org
+Dealer.org
+NumberGuessingGame.org
+PrimitiveDataType.org
+RockPaperScissors.org
+SimpleStringManipulator.org
 *.class
-// ignore emacs backup
+# ignore emacs backup
 *~
