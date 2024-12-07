@@ -1,33 +1,38 @@
 #+HTML:<div align=center><a href="https://github.com/insee-t/insee-6403-java-labs"><img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java logo" height="334" width="183"></a>
 
-* Insee 6403 java labs
+* 【 Insee 6403 java labs 】
 
-#+HTML:</div>
+<a href="#•-lab-1-•"><kbd> <br> Lab 1 <br> </kbd></a>&ensp;&ensp;
+<a href="#•-lab-2-•"><kbd> <br> Lab 2 <br> </kbd></a>&ensp;&ensp;
+<a href="#•-lab-3-•"><kbd> <br> Lab 3 <br> </kbd></a>&ensp;&ensp;
 
 * Table of Contents                                                     :TOC_2:QUOTE:
+#+HTML:</div>
 #+BEGIN_QUOTE
-- [[#lab-1][Lab 1]]
-    - [[#the-hello-program][The Hello program]]
-- [[#lab-2][Lab 2]]
-    - [[#the-dealer-program][The Dealer program]]
-    - [[#the-primitivedatatype-program][The PrimitiveDataType program]]
-    - [[#the-rockpaperscissors-program][The RockPaperScissors]]
-    - [[#the-simplestringmanipulator-program][The SimpleStringManipulator program]]
-- [[#lab-3][Lab 3]]
-    - [[#the-numberguessinggame-program][The NumberGuessingGame program]]
-    - [[#the-configurablenumberguessinggame-program][The ConfigurableNumberGuessingGame program]]
-    - [[#the-numberguessinggames-program][The NumberGuessingGames program]]
+- [[【-insee-6403-java-labs-】][Insee 6403 java labs]]
+    - [[#•-lab-1-•][Lab 1]]
+        - [[#the-hello-program][The Hello program]]
+    - [[#•-lab-2-•][Lab 2]]
+        - [[#the-dealer-program][The Dealer program]]
+        - [[#the-primitivedatatype-program][The PrimitiveDataType program]]
+        - [[#the-rockpaperscissors-program][The RockPaperScissors]]
+        - [[#the-simplestringmanipulator-program][The SimpleStringManipulator program]]
+    - [[#•-lab-2-•][Lab 2]]
+        - [[#the-numberguessinggame-program][The NumberGuessingGame program]]
+        - [[#the-configurablenumberguessinggame-program][The ConfigurableNumberGuessingGame program]]
+        - [[#the-numberguessinggames-program][The NumberGuessingGames program]]
 #+END_QUOTE
 
-** Lab 1
+#+HTML:<div align="center">
+** • Lab 1 •
+#+HTML:</div>
 
 *** • The Hello program •
-#+HTML:<div align="center">
-**** • The Hello program •
-#+HTML:</div>
 [[./lab1/Hello.java][The Hello program]]
 
-** Lab 2
+#+HTML:<div align="center">
+** • Lab 2 •
+#+HTML:</div>
 
 *** The Dealer program
 [[./thaopech/insee/lab2/Dealer.java][The Dealer program]] - The program accepts three arguments then processes and displays dealer information.
@@ -98,7 +103,9 @@ Second String: <secString>
 Resulting Sting: <result>
 #+END_EXAMPLE
 
-** Lab 3
+#+HTML:<div align="center">
+** • Lab 3 •
+#+HTML:</div>
 *** The NumberGuessingGame program
 
 [[./thaopech/insee/lab3/NumberGuessingGame.java][The NumberGuessingGame program]] - The program simulates a guessing game of which a user guesses a number from 1 to 10. The answer is randomly generated then a user enters a number via the console. 
@@ -113,7 +120,7 @@ Resulting Sting: <result>
 *** The ConfigurableNumberGuessingGame program
 
 [[./thaopech/insee/lab3/ConfigurableNumberGuessingGame.java][The ConfigurableNumberGuessingGame]] - The program simulates a guessing game of which a user guesses a number from /min/ to /max/. The answer is randomly generated then a user enters a number via the console. 
-*** Each time a number is entered, one of the following three possible outputs will be displayed. 
+**** Each time a number is entered, one of the following three possible outputs will be displayed. 
     1. ~Congratulations!~	if the number entered is the same as the answer.
     2. ~Try a lower number!~ 	if the number entered is higher than the answer.
     3. ~Try a higher number!~ 	if the number entered is smaller than the answer.  
