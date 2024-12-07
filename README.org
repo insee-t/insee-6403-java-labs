@@ -21,11 +21,9 @@
 
 ** Lab 1
 
-*** The Hello program
+*** • The Hello program •
 #+HTML:<div align="center">
     *** • The Hello program •
-    <h3></h3>
-</div>
 #+HTML:</div>
 [[./lab1/Hello.java][The Hello program]]
 
