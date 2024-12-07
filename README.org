@@ -3,13 +3,15 @@
 * 【 Insee 6403 java labs 】
 </div>
 
-<br>
+<div><br>
 
     <a href="#•-lab-1-•"><kbd> <br> Lab 1 <br> </kbd></a>&ensp;&ensp;
     <a href="#•-lab-2-•"><kbd> <br> Lab 2 <br> </kbd></a>&ensp;&ensp;
     <a href="#•-lab-3-•"><kbd> <br> Lab 3 <br> </kbd></a>&ensp;&ensp;
+
 <br>
-* Table of Contents                                                     :TOC_2:QUOTE:
+
+* • Table of Contents •                                                    :TOC_2:QUOTE:
 #+HTML:</div>
 #+BEGIN_QUOTE
 - [[【-insee-6403-java-labs-】][Insee 6403 java labs]]
