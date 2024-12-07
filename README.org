@@ -6,7 +6,11 @@
 #+HTML:<div align=center><a href="#-lab-1-"><kbd> <br> Lab 1 <br> </kbd></a>&ensp;&ensp;<a href="#-lab-2-"><kbd> <br> Lab 2 <br> </kbd></a>&ensp;&ensp;<a href="#-lab-3-"><kbd> <br> Lab 3 <br> </kbd></a>&ensp;&ensp;
 #+HTML:</div>
 
-** Table of Contents                                                    :TOC_2:QUOTE:
+[[https://img.shields.io/github/last-commit/insee-t/insee-6403-java-labs?style=for-the-badge&logoColor=D9E0EE&labelColor=292324&color=FFB1C8]]
+[[https://img.shields.io/github/repo-size/insee-t/insee-6403-java-labs?style=for-the-badge&logoColor=D9E0EE&labelColor=292324&color=FFB686]]
+[[https://img.shields.io/badge/issues-skill-green?style=for-the-badge&color=CCE8E9&logoColor=D9E0EE&labelColor=292324]]
+
+** Table of Contents                                                    :TOC_3:QUOTE:
 #+BEGIN_QUOTE
 - [[【-insee-6403-java-labs-】][Insee 6403 java labs]]
     - [[#-lab-1-][Lab 1]]
