@@ -1,4 +1,5 @@
-#+HTML:<div align=center><a href="https://github.com/insee-t/insee-6403-java-labs"><img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java logo" height="334" width="183"></a>
+#+HTML:
+<div align=center><a href="https://github.com/insee-t/insee-6403-java-labs"><img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java logo" height="334" width="183"></a>
 
 * Insee 6403 java labs
 
@@ -22,6 +23,12 @@
 ** Lab 1
 
 *** The Hello program
+#+HTML:
+<div align="center">
+    *** • The Hello program •
+    <h3></h3>
+</div>
+#+HTML:</div>
 [[./lab1/Hello.java][The Hello program]]
 
 ** Lab 2
