@@ -1,11 +1,14 @@
 #+HTML:<div align=center><a href="https://github.com/insee-t/insee-6403-java-labs"><img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java logo" height="334" width="183"></a>
 
 * 【 Insee 6403 java labs 】
+</div>
 
-<a href="#•-lab-1-•"><kbd> <br> Lab 1 <br> </kbd></a>&ensp;&ensp;
-<a href="#•-lab-2-•"><kbd> <br> Lab 2 <br> </kbd></a>&ensp;&ensp;
-<a href="#•-lab-3-•"><kbd> <br> Lab 3 <br> </kbd></a>&ensp;&ensp;
+<br>
 
+    <a href="#•-lab-1-•"><kbd> <br> Lab 1 <br> </kbd></a>&ensp;&ensp;
+    <a href="#•-lab-2-•"><kbd> <br> Lab 2 <br> </kbd></a>&ensp;&ensp;
+    <a href="#•-lab-3-•"><kbd> <br> Lab 3 <br> </kbd></a>&ensp;&ensp;
+<br>
 * Table of Contents                                                     :TOC_2:QUOTE:
 #+HTML:</div>
 #+BEGIN_QUOTE
@@ -27,8 +30,9 @@
 ** • Lab 1 •
 #+HTML:</div>
 
-*** • The Hello program •
+*** The Hello program
 [[./lab1/Hello.java][The Hello program]]
+#+HTML:<img src="./lab1/Hello-output-6403.png" style="display:block;margin-left:auto;margin-right:auto;width:50%;" />
 
 #+HTML:<div align="center">
 ** • Lab 2 •
@@ -109,18 +113,20 @@ Resulting Sting: <result>
 *** The NumberGuessingGame program
 
 [[./thaopech/insee/lab3/NumberGuessingGame.java][The NumberGuessingGame program]] - The program simulates a guessing game of which a user guesses a number from 1 to 10. The answer is randomly generated then a user enters a number via the console. 
-**** Each time a number is entered, one of the following three possible outputs will be displayed. 
+
+Each time a number is entered, one of the following three possible outputs will be displayed. 
     1. ~Congratulations!~	if the number entered is the same as the answer.
     2. ~Try a lower number!~ 	if the number entered is higher than the answer.
     3. ~Try a higher number!~ 	if the number entered is smaller than the answer.  
 
-**** The game ends when the user guesses the answer correctly or the user guesses the number incorrectly 5 times. 
+The game ends when the user guesses the answer correctly or the user guesses the number incorrectly 5 times. 
 
 
 *** The ConfigurableNumberGuessingGame program
 
 [[./thaopech/insee/lab3/ConfigurableNumberGuessingGame.java][The ConfigurableNumberGuessingGame]] - The program simulates a guessing game of which a user guesses a number from /min/ to /max/. The answer is randomly generated then a user enters a number via the console. 
-**** Each time a number is entered, one of the following three possible outputs will be displayed. 
+
+Each time a number is entered, one of the following three possible outputs will be displayed. 
     1. ~Congratulations!~	if the number entered is the same as the answer.
     2. ~Try a lower number!~ 	if the number entered is higher than the answer.
     3. ~Try a higher number!~ 	if the number entered is smaller than the answer.  
