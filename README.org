@@ -23,7 +23,7 @@
 
 *** • The Hello program •
 #+HTML:<div align="center">
-    *** • The Hello program •
+    *** The Hello program
 #+HTML:</div>
 [[./lab1/Hello.java][The Hello program]]
 
