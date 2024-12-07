@@ -1,6 +1,8 @@
+#+HTML:<div align=center>
 [[https://img.shields.io/github/last-commit/insee-t/insee-6403-java-labs?style=for-the-badge&labelColor=292324&color=FFB1C8&logoColor=D9E0EE.svg]]
 [[https://img.shields.io/github/repo-size/insee-t/insee-6403-java-labs?style=for-the-badge&labelColor=292324&color=FFB686&logoColor=D9E0EE.svg]]
 [[https://img.shields.io/badge/issues-skill-green?style=for-the-badge&color=CCE8E9&labelColor=292324&logoColor=D9E0EE.svg]]
+#+HTML:</div>
 #+HTML:<div align=center><a href="https://github.com/insee-t/insee-6403-java-labs"><img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java logo" height="334" width="183"></a>
 
 * 【 Insee 6403 java labs 】
