@@ -21,7 +21,7 @@
         - [[#the-primitivedatatype-program][The PrimitiveDataType program]]
         - [[#the-rockpaperscissors-program][The RockPaperScissors]]
         - [[#the-simplestringmanipulator-program][The SimpleStringManipulator program]]
-    - [[#-lab-2-][Lab 2]]
+    - [[#-lab-3-][Lab 3]]
         - [[#the-numberguessinggame-program][The NumberGuessingGame program]]
         - [[#the-configurablenumberguessinggame-program][The ConfigurableNumberGuessingGame program]]
         - [[#the-numberguessinggames-program][The NumberGuessingGames program]]
