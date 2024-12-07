@@ -9,10 +9,9 @@
     <a href="#•-lab-2-•"><kbd> <br> Lab 2 <br> </kbd></a>&ensp;&ensp;
     <a href="#•-lab-3-•"><kbd> <br> Lab 3 <br> </kbd></a>&ensp;&ensp;
 
-</div>
+#+HTML:</div>
 
 ** Table of Contents                                                    :TOC_2:QUOTE:
-#+HTML:</div>
 #+BEGIN_QUOTE
 - [[【-insee-6403-java-labs-】][Insee 6403 java labs]]
     - [[#•-lab-1-•][Lab 1]]
@@ -34,7 +33,7 @@
 
 *** The Hello program
 [[./lab1/Hello.java][The Hello program]]
-#+HTML:<img src="./lab1/Hello-output-6403.png" style="display:block;margin-left:auto;margin-right:auto;width:50%;" />
+[[./lab1/Hello-output-6403.png]]
 
 #+HTML:<div align="center">
 ** • Lab 2 •
