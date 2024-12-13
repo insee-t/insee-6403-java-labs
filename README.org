@@ -1,9 +1,9 @@
 #+HTML:<div align=center>
 [[https://img.shields.io/github/last-commit/insee-t/insee-6403-java-labs?style=for-the-badge&labelColor=292324&color=FFB1C8&logoColor=D9E0EE.svg]]
-[[https://img.shields.io/github/repo-size/insee-t/insee-6403-java-labs?style=for-the-badge&labelColor=292324&color=FFB686&logoColor=D9E0EE.svg]]
+[[https://img.shields.io/github/repo-size/insee-t/insee-6403-java-labs?label=SIZE&style=for-the-badge&labelColor=292324&color=FFB686&logoColor=D9E0EE.svg]]
 [[https://img.shields.io/badge/issues-skill-green?style=for-the-badge&color=CCE8E9&labelColor=292324&logoColor=D9E0EE.svg]]
 #+HTML:</div>
-#+HTML:<div align=center><a href="https://github.com/insee-t/insee-6403-java-labs"><img src="./assets/java_logo.png" alt="Java logo" height="240" width="240"></a>
+#+HTML:<div align=center><a href="https://github.com/insee-t/insee-6403-java-labs"><img src="./lab1/assets/java_logo.png" alt="Java logo" height="240" width="240"></a>
 
 * 【 Insee 6403 java labs 】
 #+HTML:</div>
@@ -11,7 +11,7 @@
 #+HTML:<div align=center><a href="#-lab-1-"><kbd> <br> Lab 1 <br> </kbd></a>&ensp;&ensp;<a href="#-lab-2-"><kbd> <br> Lab 2 <br> </kbd></a>&ensp;&ensp;<a href="#-lab-3-"><kbd> <br> Lab 3 <br> </kbd></a>&ensp;&ensp;
 #+HTML:</div>
 
-** Table of Contents                                                    :TOC_3:QUOTE:
+** 目次
 #+BEGIN_QUOTE
 - [[【-insee-6403-java-labs-】][Insee 6403 java labs]]
     - [[#-lab-1-][Lab 1]]
@@ -19,7 +19,7 @@
     - [[#-lab-2-][Lab 2]]
         - [[#the-dealer-program][The Dealer program]]
         - [[#the-primitivedatatype-program][The PrimitiveDataType program]]
-        - [[#the-rockpaperscissors-program][The RockPaperScissors]]
+        - [[#the-rockpaperscissors-program][The RockPaperScissors program]]
         - [[#the-simplestringmanipulator-program][The SimpleStringManipulator program]]
     - [[#-lab-3-][Lab 3]]
         - [[#the-numberguessinggame-program][The NumberGuessingGame program]]
@@ -132,13 +132,13 @@ Each time a number is entered, one of the following three possible outputs will 
     2. ~Try a lower number!~ 	if the number entered is higher than the answer.
     3. ~Try a higher number!~ 	if the number entered is smaller than the answer.  
 
-- The game ends when the user guesses the answer correctly or the user guesses the number incorrectly /numTries/ times. 
+The game ends when the user guesses the answer correctly or the user guesses the number incorrectly /numTries/ times. 
 
-- The program asks the user to enter the min value, the max value, and the maximum number of tries.
-    - The program also checks and detects configuration settings that the user may enter as following
-        - The program checks whether the max value is at least equal to the min value. If not, the program will keep asking for the new max value until the max value is not less than the max value. 
-        - The program checks whether the number of maximum tries is greater than 0. If not, the program will keep asking for the new maximum tries until the maximum tries is greater than 0. 
-        - The program checks whether a number is outside the minimum or maximum values. If it is, the program asks the user to enter a number again and does not increment the number of tries.  
+Moreover, the program asks the user to enter the min value, the max value, and the maximum number of tries.
+- The program also checks and detects configuration settings that the user may enter as following
+    - The program checks whether the max value is at least equal to the min value. If not, the program will keep asking for the new max value until the max value is not less than the max value. 
+    - The program checks whether the number of maximum tries is greater than 0. If not, the program will keep asking for the new maximum tries until the maximum tries is greater than 0. 
+    - The program checks whether a number is outside the minimum or maximum values. If it is, the program asks the user to enter a number again and does not increment the number of tries.  
 
 
 *** The NumberGuessingGames program

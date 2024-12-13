@@ -1,4 +1,4 @@
-// #+title: The numberGuessingGames Program
+// +title: The numberGuessingGames Program
 // #+author: Insee thaopech
 // #+id: 673040640-3
 // #+sec: 2
@@ -11,11 +11,11 @@
 
 package thaopech.insee.lab3;
 
-import java.util.Scanner;  // Import the Scanner class
+import java.util.*;
 
 public class NumberGuessingGames {
 
-    private static int min, max, numOfTries, target;
+    private static int min, max, numTries, target;
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -29,25 +29,22 @@ public class NumberGuessingGames {
             max = getMax();
         }
 
-        numOfTries = getNumOfTries();
+        numTries = getNumOfTries();
 
-        while (numOfTries <= 0) {
+        while (numTries <= 0) {
             System.err.println("The maximum number of tries must be greater than 0");
-            numOfTries = getNumOfTries();
+            numTries = getNumOfTries();
         }
 
-        numberGuessingGame();
-
-        System.out.print("What to play again (Y or y):");
-        char userResponse = scanner.next().charAt(0);
-        while(Character.toUpperCase(userResponse) == 'Y') {
+        String userInput;
+        do {
             numberGuessingGame();
             System.out.print("What to play again (Y or y):");
-            userResponse = scanner.next().charAt(0);
+            userInput = scanner.next();
         }
+        while(userInput.equalsIgnoreCase("y"));
 
         System.out.println("Thank you for playing our games. Bye!");
-        System.out.println("Welcome to a number guessing game!");
         scanner.close();
         System.exit(0);
     }
@@ -73,24 +70,25 @@ public class NumberGuessingGames {
     }
 
     public static int getNumOfTries() {
-        System.out.print("Enter the maximum number of tires:");
+        System.out.print("Enter the maximum number of tries:");
         return scanner.nextInt();
     }
 
     public static int getUserGuess() {
-        System.out.print("Enter an integer between " + min + " and " + max + ":");
+        System.out.print(String.format("Enter an integer between %d and %d:", min, max));
         return scanner.nextInt();
     }
 
     public static int numberGuessingGame() {
 
+        System.out.println("Welcome to a number guessing game!");
         target = min + (int)(Math.random() * ((max - min) + 1));
 
-        for (int index = 1, userGuess; index <= numOfTries; index++) {
+        for (int index = 1, userGuess; index <= numTries; index++) {
 
             userGuess = getUserGuess();
             while (userGuess < min || userGuess > max) {
-                System.err.println("The number must between " +  min + " and " + max);
+                System.err.println(String.format("The number must between %d and %d", min, max));
                 userGuess = getUserGuess();
             }
 
@@ -99,7 +97,7 @@ public class NumberGuessingGames {
             }
         }
 
-        System.out.println("You have tried " + numOfTries + " times. You ran out of guesses");
+        System.out.println(String.format("You have tried %d times. You ran out of guesses", numTries));
         System.out.println("The answer is " + target);
         return 0;
     }
