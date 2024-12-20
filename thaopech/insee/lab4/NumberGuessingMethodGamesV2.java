@@ -23,12 +23,12 @@
 
 package thaopech.insee.lab4;
 
-import java.util.Scanner;  // Import the Scanner class
+import java.util.*;
 
 public class NumberGuessingMethodGamesV2 {
 
     private static int min, max, numTries, target, gameIndex;
-    private static int[] gameLogs= new int[11];
+    private static ArrayList<Integer> guessHistory = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -68,6 +68,7 @@ public class NumberGuessingMethodGamesV2 {
     }
 
     public static void playGame() {
+        guessHistory.clear();
 
         System.out.println("Welcome to a number guessing game!");
         genAnswer();
@@ -78,6 +79,8 @@ public class NumberGuessingMethodGamesV2 {
                 System.err.println(String.format("The number must be between %d and %d", min, max));
                 userGuess = getUserGuess();
             }
+
+            guessHistory.add(userGuess);
 
             if (numberGuessingResponse(userGuess, guessIndex) == 0) {
                 return;
