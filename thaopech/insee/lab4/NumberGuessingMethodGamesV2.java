@@ -132,28 +132,30 @@ public class NumberGuessingMethodGamesV2 {
     }
 
     public static void displayGuessesLoop() {
-
-        System.out.print("Enter 'a' to list all guesses, 'g' for a specific guess, or any other key to quit:");
-        String userOption = scanner.next();
-        displayGuesses(userOption);
-
-        while (userOption.equalsIgnoreCase("a") || userOption.equalsIgnoreCase("g")) {
+        String userInput;
+        do {
             System.out.print("Enter 'a' to list all guesses, 'g' for a specific guess, or any other key to quit:");
-            userOption = scanner.next();
-            displayGuesses(userOption);
-        }
+            userInput = scanner.next();
+            displayGuesses(userInput);
+        } while (userInput.equalsIgnoreCase("a") || userInput.equalsIgnoreCase("g"));
     }
 
-    public static void displayGuesses(String userOption) {
-
-        if (userOption.equalsIgnoreCase("a")) {
-            for (int logIndex = 1; logIndex <= gameIndex; logIndex++) {
-                System.out.println("Guess " + logIndex + ": " + gameLogs[logIndex]);
+    public static void displayGuesses(String userInput) {
+        if (userInput.equalsIgnoreCase("a")) {
+            int index = 1;
+            for (var guess : guessHistory) {
+                System.out.println(String.format("Guess %d: %d", index, guess));
+                ++index;
             }
-        } else if (userOption.equalsIgnoreCase("g")){
+        } else if (userInput.equalsIgnoreCase("g")) {
             System.out.print("Enter the guess number:");
             int logOption = scanner.nextInt();
-            System.out.println("Guess " + logOption + ": " + gameLogs[logOption]);
+            --logOption;
+            if (logOption >= 0 && logOption < guessHistory.size()) {
+                System.out.println("Guess " + (logOption + 1) + ": " + guessHistory.get(logOption));
+            } else {
+                System.out.println("Invalid guess number.");
+            }
         }
     }
 }
