@@ -2,6 +2,9 @@ package thaopech.insee.lab5;
 
 import java.util.*;
 
+/**
+ * Implements various recursive methods for array and number operations. Demostrates the use of recursion for solving problmes.
+ */
 public class RecursiveMethods {
     /**
      * Recursively finds the sum of digits in a number.

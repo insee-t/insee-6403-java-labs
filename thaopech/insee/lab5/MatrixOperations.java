@@ -2,26 +2,26 @@ package thaopech.insee.lab5;
 
 import java.util.*;
 
-interface MatrixFiller {
-    public void fill(int row, int col);
-}
-
 /**
- * A program that helps you work with matrices in two main phases:
- * 1. Matrix Creation Phase - where you create your initial matrix
- * 2. Matrix Operations Phase - where you perform various calculations on your
- * matrix
+ * The MatrixOperations class provides functionality to create and perform various operations on matrices.
+ * It allows users to create matrices through custom input, random generation, or predefined types like zero or one matrices.
+ * Additionally, users can perform operations like transposing the matrix, calculating row and column sums,
+ * finding the minimum and maximum elements, and displaying the diagonal elements.
  *
  * @author Insee Thaopech
  * @version 1.0
  */
 public class MatrixOperations {
+
     private static int[][] matrix;
     private static int rows;
     private static int columns;
     private static final Scanner scanner = new Scanner(System.in);
     private static final int MAX_RANDOM_VALUE = 10;
 
+    /**
+     * Displays the matrix creation menu options to the user.
+     */
     public static void displayCreationMenu() {
         System.out.println("Matrix Creation Menu:");
         System.out.println("1. User Input Matrix");
@@ -33,6 +33,18 @@ public class MatrixOperations {
         System.out.print("Enter your choice: ");
     }
 
+    /**
+     * Creates a matrix based on the user's choice.
+     *
+     * @param choice The choice selected by the user for creating the matrix:
+     *               1 - Custom matrix via user input,
+     *               2 - Random matrix with values between 0 and 9,
+     *               3 - Matrix filled with zeros,
+     *               4 - Matrix filled with ones,
+     *               5 - Diagonal matrix.
+     *
+     * @throws IllegalArgumentException if an invalid choice is provided.
+     */
     public static void createMatrix(int choice) {
         if (choice == 1) {
             createCustomMatrix();
@@ -55,12 +67,16 @@ public class MatrixOperations {
                     matrix[row][col] = (row == col) ? 1 : 0;
                     break;
                 default:
-                    throw new IllegalArgumentException("Error:Invalid choice");
+                    throw new IllegalArgumentException("Error: Invalid choice");
                 }
             }
         }
     }
 
+    /**
+     * Prompts the user to enter values for a custom matrix.
+     * The user must provide the matrix elements for each row.
+     */
     public static void createCustomMatrix() {
         System.out.println("Enter matrix elements:");
         scanner.nextLine();
@@ -88,30 +104,31 @@ public class MatrixOperations {
         }
     }
 
+    /**
+     * Creates a diagonal matrix with ones on the diagonal and zeros elsewhere.
+     */
     public static void createDiagonalMatrix() {
         createMatrix(5);
     }
 
-    public static int findMaxElementLength() {
-        int max = Integer.MIN_VALUE;
-        for (int[] row : matrix) {
-            for (int elem : row) {
-                max = Math.max(max, Integer.toString(elem).length());
-            }
-        }
-        return max;
-    }
-
+    /**
+     * Displays the matrix to the user. Each element is printed with a width of 2 characters for alignment.
+     * The method ensures the matrix is displayed in a clear, tabular format.
+     *
+     * @param matrix The matrix to be displayed.
+     */
     public static void displayMatrix(int[][] matrix) {
-        int maxElementLength = findMaxElementLength();
         for (int[] row : matrix) {
             for (int elem : row) {
-                System.out.print(String.format("%" + (maxElementLength + 2) + "d", elem));
+                System.out.print(String.format("%3d", elem));
             }
             System.out.println();
         }
     }
 
+    /**
+     * Displays the operations menu for matrix operations.
+     */
     public static void displayOperationsMenu() {
         System.out.println("\nMatrix Operations Menu:");
         System.out.println("1. Find Transpose of the Matrix");
@@ -123,6 +140,9 @@ public class MatrixOperations {
         System.out.print("Enter your choice: ");
     }
 
+    /**
+     * Transposes the matrix and displays the transposed version.
+     */
     public static void transposeMatrix() {
         int[][] transposedMatrix = new int[columns][rows];
 
@@ -132,9 +152,13 @@ public class MatrixOperations {
                     = matrix[transposedMatrixCol][transposedMatrixRow];
             }
         }
+        System.out.println("Transposed Matrix:");
         displayMatrix(transposedMatrix);
     }
 
+    /**
+     * Calculates and displays the sum of each row and each column in the matrix.
+     */
     public static void calculateSums() {
         int sum;
         for (int row = 0; row < rows; row++) {
@@ -156,6 +180,9 @@ public class MatrixOperations {
         }
     }
 
+    /**
+     * Finds and displays the minimum and maximum elements in the matrix.
+     */
     public static void findMinMax() {
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
@@ -169,6 +196,11 @@ public class MatrixOperations {
         System.out.println("Maximum element: " + max);
     }
 
+    /**
+     * Displays the diagonal elements of the matrix if it is square (rows == columns).
+     *
+     * If the matrix is not square, an error message is displayed.
+     */
     public static void displayDiagonal() {
         if (rows != columns) {
             System.err.println("Matrix is not square. Cannot display diagonal elements");
@@ -185,6 +217,12 @@ public class MatrixOperations {
         System.out.println();
     }
 
+    /**
+     * The main method for executing the program.
+     * It provides the user with options for matrix creation and operations.
+     *
+     * @param args Command-line arguments (not used in this program).
+     */
     public static void main(String[] args) {
         boolean continueProgram = true;
         while (continueProgram) {
@@ -229,6 +267,7 @@ public class MatrixOperations {
             while (continueOperations) {
                 displayOperationsMenu();
                 int operation = scanner.nextInt();
+                System.out.println();
 
                 switch (operation) {
                     case 1:

@@ -63,6 +63,10 @@ public class NumberAnalyzer {
         return true;
     }
 
+    /**
+     * Print elements in array.
+     * @param arr the array to print
+     */
     public static void printArray(int[] arr) {
         for (int elem: arr) {
             System.out.print(elem + " ");
