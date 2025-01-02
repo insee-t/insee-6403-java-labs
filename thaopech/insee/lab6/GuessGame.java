@@ -54,16 +54,22 @@ public class GuessGame {
     public void setMaxTries(int maxTries) {
         this.maxTries = maxTries;
     }
-    // public void configureGame(int min, int max, int maxTries) {
 
-    //     System.out.print("Enter the min value:");
-    //     min = scanner.nextInt();
+    public void configureGame() {
+        System.out.print("Enter the min value: ");
+        int min = input.nextInt();
 
-    //     max = getMax();
+        System.out.print("Enter the max value: ");
+        int max = input.nextInt();
 
-    //     numTries = getNumTries();
-    // }
-    //
+        System.out.print("Enter the maximum number of tries: ");
+        int maxTries = input.nextInt();
+
+        setMin(min);
+        setMax(max);
+        setMaxTries(maxTries);
+    }
+
     public int getAttempts() {
         return this.attempts;
     }
@@ -104,10 +110,6 @@ public class GuessGame {
 
         for (int guessIndex = 1; guessIndex <= maxTries; guessIndex++) {
             int userGuess = getUserGuess();
-            while (userGuess < min || userGuess > max) {
-                System.err.println(String.format("The number must be between %d and %d", min, max));
-                userGuess = getUserGuess();
-            }
 
             if (numberGuessingResponse(userGuess, guessIndex) == 0) {
                 return true;
