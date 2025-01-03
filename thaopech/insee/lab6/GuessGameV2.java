@@ -9,8 +9,6 @@ public class GuessGameV2 extends GuessGame {
 
         while (max < min) {
             System.err.println("Invalid input: max must be greater than or equal to min.");
-            System.out.print(min + " " + max);
-            System.out.print(maxTries);
             System.out.print("Enter the min value: ");
             min = input.nextInt();
             System.out.print("Enter the max value: ");
