@@ -10,7 +10,22 @@ public class NumberGuessingOOPGameV2 {
     // Figure 2
     public void configure() {
         this.game = new GuessGameV2();
-        this.game.configureGame();
+
+        int defaultMaxTries = 10;
+
+        System.out.print("Enter the min value: ");
+        int min = input.nextInt();
+
+        System.out.print("Enter the max value: ");
+        int max = input.nextInt();
+
+        this.game.configureGame(min, max, defaultMaxTries);
+
+        System.out.print("Enter the maximum number of tries: ");
+        int maxTries = input.nextInt();
+
+        this.game.configureGame(this.game.getMin(), this.game.getMax(), maxTries);
+        System.out.println("Game Configureation: " + this.game.toString());
     }
 
     // Figure 3

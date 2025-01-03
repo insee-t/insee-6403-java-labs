@@ -55,16 +55,7 @@ public class GuessGame {
         this.maxTries = maxTries;
     }
 
-    public void configureGame() {
-        System.out.print("Enter the min value: ");
-        int min = input.nextInt();
-
-        System.out.print("Enter the max value: ");
-        int max = input.nextInt();
-
-        System.out.print("Enter the maximum number of tries: ");
-        int maxTries = input.nextInt();
-
+    public void configureGame(int min, int max, int maxTries) {
         setMin(min);
         setMax(max);
         setMaxTries(maxTries);

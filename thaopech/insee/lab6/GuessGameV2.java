@@ -5,23 +5,18 @@ package thaopech.insee.lab6;
 public class GuessGameV2 extends GuessGame {
 
     @Override
-    public void configureGame() {
+    public void configureGame(int min, int max, int maxTries) {
 
-        System.out.print("Enter the min value: ");
-        int min = input.nextInt();
-
-        System.out.print("Enter the max value: ");
-        int max = input.nextInt();
         while (max < min) {
             System.err.println("Invalid input: max must be greater than or equal to min.");
+            System.out.print(min + " " + max);
+            System.out.print(maxTries);
             System.out.print("Enter the min value: ");
             min = input.nextInt();
             System.out.print("Enter the max value: ");
             max = input.nextInt();
         }
 
-        System.out.print("Enter the maximum number of tries: ");
-        int maxTries = input.nextInt();
         while (maxTries <= 0) {
             System.err.println("Invalid input: maxTries must be greater than 0.");
             System.out.print("Enter the maximum number of tries: ");
@@ -31,8 +26,6 @@ public class GuessGameV2 extends GuessGame {
         setMin(min);
         setMax(max);
         setMaxTries(maxTries);
-
-        System.out.println("Game Configureation: " + toString());
     }
 
     public String toString() {

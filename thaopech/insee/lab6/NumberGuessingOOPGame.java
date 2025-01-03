@@ -1,6 +1,6 @@
         // fix the format
         // ? Make sure they're instance though.
-package thaopech.insee.lab6.v1;
+package thaopech.insee.lab6;
 
 import java.util.*;
 
@@ -12,7 +12,17 @@ public class NumberGuessingOOPGame {
     // Figure 2
     public void configure() {
         this.game = new GuessGame();
-        this.game.configureGame();
+
+        System.out.print("Enter the min value: ");
+        int min = input.nextInt();
+
+        System.out.print("Enter the max value: ");
+        int max = input.nextInt();
+
+        System.out.print("Enter the maximum number of tries: ");
+        int maxTries = input.nextInt();
+
+        this.game.configureGame(min, max, maxTries);
     }
 
     // Figure 3
