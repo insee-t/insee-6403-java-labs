@@ -4,7 +4,7 @@ import java.util.*;
 
 public class GuessGame {
 
-    public static Scanner input = new Scanner(System.in);
+    public static final Scanner input = new Scanner(System.in);
 
     private int min;
     private int max;
@@ -64,9 +64,19 @@ public class GuessGame {
     public int getAttempts() {
         return this.attempts;
     }
+
+    public void setAttempts(int attempts) {
+        this.attempts = attempts;
+    }
+
     public int getAnswer() {
         return this.answer;
     }
+
+    public void setAnswer(int answer) {
+        this.answer = answer;
+    }
+
     public void generateAnswer() {
         int min = getMin();
         int max = getMax();
@@ -83,7 +93,7 @@ public class GuessGame {
 
         int answer = getAnswer();
         if (userGuess == answer) {
-            System.out.println("Congratulations! You've guessed  the number in " + index + (index == 1 ? " attempts" : " attempt"));
+            System.out.println("Congratulations! You've guessed the number in " + index + (index == 1 ? " attempts" : " attempt"));
             return 0;
         }
         if (userGuess > answer) {

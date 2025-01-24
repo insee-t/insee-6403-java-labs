@@ -1,8 +1,20 @@
-// Change it to read buffer or something?
-// change getUserInput into other name
 package thaopech.insee.lab6;
 
 public class GuessGameV2 extends GuessGame {
+
+    public GuessGameV2() {
+        setMin(1);
+        setMax(100);
+        setMaxTries(10);
+        setAnswer(0);
+        setAttempts(0);
+    }
+
+    public GuessGameV2(int min, int max, int maxTries) {
+        super.configureGame(min, max, maxTries);
+        setAnswer(0);
+        setAttempts(0);
+    }
 
     @Override
     public void configureGame(int min, int max, int maxTries) {
@@ -26,27 +38,13 @@ public class GuessGameV2 extends GuessGame {
         setMaxTries(maxTries);
     }
 
+    @Override
     public String toString() {
         return "[" +
             "Min: " + getMin() +
             ", Max: " + getMax() +
             ", Max Tries: " + getMaxTries() +
             ", Attemps: " + getAttempts() + "]";
-    }
-
-    public int numberGuessingResponse(int userGuess, int index) {
-
-        int answer = getAnswer();
-        if (userGuess == answer) {
-            System.out.println("Congratulations! You've guessed  the number in " + index + (index == 1 ? " attempts" : " attempt"));
-            return 0;
-        }
-        if (userGuess > answer) {
-            System.out.println("Try a lower number!");
-            return 1;
-        }
-        System.out.println("Try a higher number!");
-        return 1;
     }
 
     @Override

@@ -7,7 +7,7 @@ import java.util.*;
 public class NumberGuessingOOPGame {
 
     private GuessGame game;
-    public static Scanner input = new Scanner(System.in);
+    public static final Scanner input = new Scanner(System.in);
 
     // Figure 2
     public void configure() {
@@ -45,5 +45,6 @@ public class NumberGuessingOOPGame {
         NumberGuessingOOPGame program = new NumberGuessingOOPGame();
         program.configure();
         program.playGames();
+        input.close();
     }
 }

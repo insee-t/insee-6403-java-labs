@@ -5,7 +5,7 @@ import java.util.*;
 public class NumberGuessingOOPGameV2 {
 
     private GuessGameV2 game;
-    public static Scanner input = new Scanner(System.in);
+    public static final Scanner input = new Scanner(System.in);
 
     // Figure 2
     public void configure() {
@@ -24,8 +24,11 @@ public class NumberGuessingOOPGameV2 {
         System.out.print("Enter the maximum number of tries: ");
         int maxTries = input.nextInt();
 
-        this.game.configureGame(this.game.getMin(), this.game.getMax(), maxTries);
-        System.out.println("Game Configureation: " + this.game.toString());
+        min = this.game.getMin();
+        max = this.game.getMax();
+
+        this.game.configureGame(min, max, maxTries);
+        System.out.println("Game Configuration: " + this.game.toString());
     }
 
     // Figure 3
@@ -48,5 +51,6 @@ public class NumberGuessingOOPGameV2 {
         NumberGuessingOOPGameV2 program = new NumberGuessingOOPGameV2();
         program.configure();
         program.playGames();
+        input.close();
     }
 }
