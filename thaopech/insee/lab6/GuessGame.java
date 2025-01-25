@@ -1,11 +1,21 @@
+/**
+ * GuessGame.java
+ * This class represents a basic number guessing game.
+ * It includes methods for configuring the game, generating a random answer, and handling user input.
+ * @author Insee Thaopech
+ * @version 1.0
+ */
+
 package thaopech.insee.lab6;
 
 import java.util.*;
 
 public class GuessGame {
 
+    // Static Scanner instance for user input
     public static final Scanner input = new Scanner(System.in);
 
+    // Game properties
     private int min;
     private int max;
     private int maxTries;
@@ -13,6 +23,8 @@ public class GuessGame {
     private int attempts;
 
     // Constructors
+
+    // Default constructor initializing default game parameters
     public GuessGame() {
         min = 1;
         max = 100;
@@ -21,14 +33,16 @@ public class GuessGame {
         attempts = 0;
     }
 
+    // Parameterized constructor for custom game configuration
     public GuessGame(int min, int max, int maxTries) {
         this.min = min;
         this.max = max;
         this.maxTries = maxTries;
-
         answer  = 0;
         attempts = 0;
     }
+
+    // Getters and Setters
 
     public int getMin() {
         return this.min;
@@ -76,18 +90,20 @@ public class GuessGame {
         this.answer = answer;
     }
 
+    // Generates a random answer within the specified range
     public void generateAnswer() {
         int min = getMin();
         int max = getMax();
         this.answer = min + (int) (Math.random() * ((max - min) + 1));
     }
 
+    // Prompts the user to input a guess and returns it
     public int getUserGuess() {
         System.out.print(String.format("Enter an integer between %d and %d: ", min, max));
         return input.nextInt();
     }
 
-
+    // Provides feedback on the user's guess
     public int numberGuessingResponse(int userGuess, int index) {
 
         int answer = getAnswer();
@@ -103,6 +119,7 @@ public class GuessGame {
         return 1;
     }
 
+    // Plays a single game instance
     public boolean playSingleGame() {
 
         System.out.println("Welcome to a number guessing game!");

@@ -1,10 +1,10 @@
-// NumberGuessingOOPGameV3.java
-// This class is the main driver for the Number Guessing Game V3.
-// It allows users to configure the game, play multiple rounds, and view game records.
-// The class integrates with GuessGameV3 for game logic and maintains a user-friendly interface.
 /**
+ * NumberGuessingOOPGameV3.java
+ * This class is the main driver for the Number Guessing Game V3.
+ * It allows users to configure the game, play multiple rounds, and view game records.
+ * The class integrates with GuessGameV3 for game logic and maintains a user-friendly interface.
  * @author Insee Thaopech
- * @version 1.0
+ * @version 1.1
  */
 
 package thaopech.insee.lab6;

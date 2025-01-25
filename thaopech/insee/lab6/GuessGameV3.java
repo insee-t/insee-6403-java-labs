@@ -1,8 +1,8 @@
-// GuessGameV3.java
-// This class extends GuessGameV2 and adds additional features such as game logging and record keeping.
-// It includes methods for configuring the game, playing a single game, and managing game records.
-// The class makes use of getters and setters for better encapsulation.
 /**
+ * GuessGameV3.java
+ * This class extends GuessGameV2 and adds additional features such as game logging and record keeping.
+ * It includes methods for configuring the game, playing a single game, and managing game records.
+ * The class makes use of getters and setters for better encapsulation.
  * @author Insee Thaopech
  * @version 1.1
  */
