@@ -40,7 +40,6 @@ public class GuessGame {
 
     public int getMax() {
         return this.max;
-
     }
 
     public void setMax(int max) {
@@ -93,7 +92,7 @@ public class GuessGame {
 
         int answer = getAnswer();
         if (userGuess == answer) {
-            System.out.println("Congratulations! You've guessed the number in " + index + (index == 1 ? " attempts" : " attempt"));
+            System.out.println("Congratulations! You've guessed the number in " + index + (index == 1 ? " attempt." : " attempts."));
             return 0;
         }
         if (userGuess > answer) {

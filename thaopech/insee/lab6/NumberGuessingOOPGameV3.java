@@ -40,15 +40,13 @@ public class NumberGuessingOOPGameV3 {
         max = this.game.getMax();
 
         this.game.configureGame(min, max, maxTries);
-        System.out.println("Game Configuration: " + this.game.toString());
         GuessGameV3.addGameRecord(this.game); // Add the configured game to records
     }
 
     // Allows users to play multiple games or view records
     public void playGames() {
         int choice;
-        boolean result = this.game.playSingleGame(); // Play the first game
-        boolean playAgain;
+        this.game.playSingleGame(); // Play the first game
 
         do {
             System.out.println("Do you want to:");
@@ -56,12 +54,6 @@ public class NumberGuessingOOPGameV3 {
             System.out.println("2. View game records");
             System.out.println("3. Quit");
             choice = input.nextInt();
-
-            playAgain = input.next().equalsIgnoreCase("y"); // Check if the user wants to play again
-
-            if (playAgain) {
-                configure();
-            }
 
             switch (choice) {
                 case 1:
@@ -74,9 +66,9 @@ public class NumberGuessingOOPGameV3 {
                 default:
                     break;
             }
-        } while (playAgain);
+        } while (choice != 3);
 
-        System.out.println("Thank you for playing the Number Guessing Game V2!");
+        System.out.println("Thank you for playing the Number Guessing Game V3!");
     }
 
     // Displays the records of past games
@@ -86,7 +78,7 @@ public class NumberGuessingOOPGameV3 {
         System.out.println("2. Specific Game Record");
 
         int selection = input.nextInt(); // Get user's selection
-        GuessGameV3[] gameHistory = GuessGameV3.getGameRecord(); // Retrieve all game records
+        GuessGameV3[] gameHistory = GuessGameV3.getGameRecords(); // Retrieve all game records
 
         switch (selection) {
             case 1:
