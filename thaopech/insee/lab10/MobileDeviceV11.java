@@ -5,6 +5,8 @@ import javax.swing.JRadioButton;
 import javax.swing.SwingUtilities;
 import javax.swing.event.ChangeListener;
 import javax.swing.event.ListSelectionListener;
+import javax.swing.JTextField;
+import javax.swing.JComboBox;
 
 import java.util.List;
 import java.awt.event.ActionEvent;
@@ -102,4 +104,4 @@ public class MobileDeviceV11 extends MobileDeviceV10 {
             }
         });
     }
-}}
+}

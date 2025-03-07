@@ -1,4 +1,3 @@
-// remove get path and add space.
 package thaopech.insee.lab10;
 
 import java.awt.Color;
@@ -10,9 +9,31 @@ import javax.swing.JFileChooser;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
+import javax.swing.JTextField;
 
+/**
+ * The `MobileDeviceV9` class extends `MobileDeviceV8` to add additional functionality
+ * for handling file operations (open, save, new), font size and family customization,
+ * and color changes for text fields. It also includes menu items for these actions.
+ */
 public class MobileDeviceV9 extends MobileDeviceV8 {
 
+    public JTextField getDeviceNameField() {
+        return nameField;
+    }
+
+    public JTextField getBrandField() {
+        return brandField;
+    }
+
+    public JTextField getPriceField() {
+        return priceField;
+    }
+    
+    /**
+     * Adds action listeners to menu items for handling user interactions such as
+     * file operations, font size and family changes, and color changes.
+     */
     @Override
     public void addListeners() {
         super.addListeners();
@@ -33,6 +54,11 @@ public class MobileDeviceV9 extends MobileDeviceV8 {
         font3MenuItem.addActionListener(this);
     }
 
+    /**
+     * Handles action events triggered by user interactions with menu items.
+     *
+     * @param e The `ActionEvent` object representing the user's action.
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
 
@@ -92,7 +118,7 @@ public class MobileDeviceV9 extends MobileDeviceV8 {
             setAllFont(fontFamily, fontSize);
             return;
         }
-        
+
         if (src == font1MenuItem
             || src == font2MenuItem
             || src == font3MenuItem) {
@@ -112,9 +138,14 @@ public class MobileDeviceV9 extends MobileDeviceV8 {
             extraComponent.getFeatureTextArea().setForeground(fontColor);
             return;
         }
-
     }
-    
+
+    /**
+     * Sets the font family and size for all text fields and the features text area.
+     *
+     * @param fontFamily The font family to apply.
+     * @param fontSize   The font size to apply.
+     */
     public void setAllFont(String fontFamily, int fontSize) {
         nameField.setFont(new Font(fontFamily, nameField.getFont().getStyle(), fontSize));
         brandField.setFont(new Font(fontFamily, brandField.getFont().getStyle(), fontSize));
@@ -122,10 +153,20 @@ public class MobileDeviceV9 extends MobileDeviceV8 {
         extraComponent.getFeatureTextArea().setFont(new Font(fontFamily, extraComponent.getFeatureTextArea().getFont().getStyle(), fontSize));
     }
 
+    /**
+     * Constructs a new `MobileDeviceV9` instance with the specified title.
+     *
+     * @param title The title of the application window.
+     */
     public MobileDeviceV9(String title) {
         super(title);
     }
 
+    /**
+     * Creates and displays the GUI for the `MobileDeviceV9` application.
+     * This method initializes the frame, adds components, sets up menus,
+     * adds listeners, and configures frame features.
+     */
     public static void createAndShowGUI() {
         MobileDeviceV9 mdv9 = new MobileDeviceV9("Mobile Device V9");
         mdv9.addComponents();
@@ -134,6 +175,12 @@ public class MobileDeviceV9 extends MobileDeviceV8 {
         mdv9.setFrameFeatures();
     }
 
+    /**
+     * The entry point for the application. Ensures the GUI is created on the
+     * Event Dispatch Thread for thread safety.
+     *
+     * @param args Command-line arguments (not used).
+     */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {

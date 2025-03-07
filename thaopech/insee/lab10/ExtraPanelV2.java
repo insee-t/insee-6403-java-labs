@@ -17,7 +17,7 @@ public class ExtraPanelV2 {
     protected Color lightYellow = Color.decode("#FFFFC8"); // Light Yellow
 
     /**
-     * Constructor initializes the UI components including labels, combo box, 
+     * Constructor initializes the UI components including labels, combo box,
      * text area, and image display.
      */
     public ExtraPanelV2() {
@@ -41,7 +41,7 @@ public class ExtraPanelV2 {
 
     /**
      * Returns the panel containing OS selection and feature components.
-     * 
+     *
      * @return JPanel with extra components.
      */
     public JPanel getPanel() {
@@ -50,7 +50,7 @@ public class ExtraPanelV2 {
 
     /**
      * Returns the OS selection label.
-     * 
+     *
      * @return JLabel for operating system.
      */
     public JLabel getOSLabel() {
@@ -59,7 +59,7 @@ public class ExtraPanelV2 {
 
     /**
      * Returns the feature label.
-     * 
+     *
      * @return JLabel for device features.
      */
     public JLabel getFeatureLabel() {
@@ -68,17 +68,17 @@ public class ExtraPanelV2 {
 
     /**
      * Returns the text area for entering device features.
-     * 
+     *
      * @return JTextArea for features.
      */
     public JTextArea getFeatureTextArea() {
         return featureTextArea;
     }
-    
+
     public JComboBox<String> getOSComboBox() {
         return oSComboBox;
     }
-    
+
     public JScrollPane getFeatureScrollPane() {
         return featureScrollPane;
     }
