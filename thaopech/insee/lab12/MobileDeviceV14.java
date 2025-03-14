@@ -77,13 +77,13 @@ public class MobileDeviceV14 extends MobileDeviceV13 {
      * and loading the list of mobile devices from the file.
      */
     public void handleMenuOpen() {
-        getDeviceList().clear();
 
         JFileChooser fileChooser = new JFileChooser();
         int returnValue = fileChooser.showOpenDialog(this);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
+            getDeviceList().clear();
             File selectedFile = fileChooser.getSelectedFile();
-            JOptionPane.showMessageDialog(this, "Opening: " + selectedFile.getName(), "Message", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Opening: " + selectedFile.getAbsolutePath(), "Message", JOptionPane.INFORMATION_MESSAGE);
             try {
                 Scanner scanner = new Scanner(new File(selectedFile.getAbsolutePath()));
                 String mobileDevicesString = "";
